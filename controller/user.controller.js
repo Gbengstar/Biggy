@@ -15,7 +15,7 @@ exports.signup = async (req, res)=>{
     
 
     // create link 
-    const link = `${req.headers.host}/api/v1/${user.phone}`
+    const link = `${req.headers.host}/${user.phone}`
     console.log(link)
 
     res.cookie("phone", req.body.phone)
