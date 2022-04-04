@@ -7,7 +7,6 @@ const schema = new mongoose.Schema({
     required: [true, "First name is required"],
     minlength: 5,
     maxlength: 255,
-
   },
   last_name: {
     type: String,
@@ -22,7 +21,7 @@ const schema = new mongoose.Schema({
     minlength: 5,
     maxlength: 255,
   },
-  
+
   email: {
     type: String,
     required: [true, "Your valid email address is required"],
@@ -31,10 +30,9 @@ const schema = new mongoose.Schema({
     validate: [validator.isEmail, "Kindly input a valid email address"],
   },
 
-  entries:{
+  entries: {
     type: Number,
     default: 1,
-  }
-  
+  },
 });
 exports.userModel = mongoose.model("User", schema);

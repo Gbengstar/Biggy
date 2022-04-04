@@ -1,9 +1,8 @@
-const {Router} = require('express')
-const { winners} = require("../controller/user.controller.js")
+const { Router } = require("express");
+const { winners } = require("../controller/user.controller.js");
 
-const router = Router()
+const router = Router();
 
+router.get("/", winners);
 
-router.get('/', winners)
-
-module.exports = router
+module.exports = router;
